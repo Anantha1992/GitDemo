@@ -30,3 +30,5 @@ class TestHomePage(BaseClass):
     def getData(self, request):
         return request.param
 
+#This is test home page test
+#new one
