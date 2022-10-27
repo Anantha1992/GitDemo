@@ -46,3 +46,5 @@ class TestOne(BaseClass):
         print("modified2")
 
         assert ("Success! Thank you!" in textMatch)
+print("hello")
+print("nice")
