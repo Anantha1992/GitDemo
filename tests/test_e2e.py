@@ -18,7 +18,7 @@ class TestOne(BaseClass):
         log = self.getLogger()
         homePage = HomePage(self.driver)
         checkoutpage = homePage.shopItems()
-        log.info("getting all the card titles")
+        log.info("getting all the card titles from cards")
         cards = checkoutpage.getCardTitles()
         i = -1
         for card in cards:
@@ -41,6 +41,6 @@ class TestOne(BaseClass):
         self.driver.find_element(By.XPATH,"//div[@class='checkbox checkbox-primary']").click()
         self.driver.find_element(By.CSS_SELECTOR,"[type='submit']").click()
         textMatch = self.driver.find_element(By.CSS_SELECTOR,"[class*='alert-success']").text
-        log.info("Text received from application is "+textMatch)
+        log.info("Text received from application is/was "+textMatch)
 
         assert ("Success! Thank you!" in textMatch)
