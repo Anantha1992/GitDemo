@@ -42,5 +42,7 @@ class TestOne(BaseClass):
         self.driver.find_element(By.CSS_SELECTOR,"[type='submit']").click()
         textMatch = self.driver.find_element(By.CSS_SELECTOR,"[class*='alert-success']").text
         log.info("Text received from application is/was "+textMatch)
+        print("modified1")
+        print("modified2")
 
         assert ("Success! Thank you!" in textMatch)
